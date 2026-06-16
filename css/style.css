@@ -20,6 +20,7 @@
   --ember:   #C4622A;
   --sand:    #C4A882;
   --stone:   #7A6A58;
+  --dark_ember: #914316;
 
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body:    'DM Sans', system-ui, sans-serif;
@@ -329,7 +330,7 @@ a { color: inherit; }
 
 .col-num {
   font-size: 0.65rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.3em;
   color: var(--ember);
   display: block;
   margin-bottom: 1rem;
@@ -344,7 +345,7 @@ a { color: inherit; }
 }
 
 .col-desc {
-  font-size: 0.88rem;
+  font-size: 2 rem;
   color: var(--stone);
   line-height: 1.7;
   margin-bottom: 1.25rem;
@@ -563,8 +564,8 @@ a.wd-project-link:hover { text-decoration: underline; }
 */
 .ab-linkedin {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--ember);
+  font-size: 1.0 rem;
+  color: var(--dark);
   text-decoration: none;
   letter-spacing: 0.04em;
   border-bottom: 1px solid color-mix(in srgb, var(--ember) 35%, transparent);
@@ -587,10 +588,11 @@ a.wd-project-link:hover { text-decoration: underline; }
   margin: 0 auto;
   padding: clamp(2rem, 4vw, 3rem) var(--gutter);
   border-top: 1px solid color-mix(in srgb, var(--sand) 40%, transparent);
+
 }
 
 .or-section-label {
-  font-size: 0.65rem;
+  font-size: 1.8rem;
   letter-spacing: 0.1em;
   color: var(--stone);
   text-transform: uppercase;
@@ -598,30 +600,10 @@ a.wd-project-link:hover { text-decoration: underline; }
   display: block;
 }
 
-/* Instagram */
-.or-instagram { padding-right: clamp(1.5rem, 3vw, 3rem); }
-
-.or-instagram-embed {
-  width: 100%;
-  min-height: 320px;
-}
-
-.or-instagram-placeholder {
-  width: 100%;
-  min-height: 320px;
-  background: color-mix(in srgb, var(--dark) 6%, transparent);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  font-size: 0.65rem;
-  color: color-mix(in srgb, var(--stone) 50%, transparent);
-  letter-spacing: 0.06em;
-}
-
 /* Credentials */
-.or-creds { padding-left: clamp(1.5rem, 3vw, 3rem); border-left: 1px solid color-mix(in srgb, var(--sand) 40%, transparent); }
+.or-creds { 
+  padding-left: clamp(1.5rem, 3vw, 3rem); 
+  border-left: 1px solid color-mix(in srgb, var(--sand) 40%, transparent); }
 
 .or-cred-item {
   display: flex;
@@ -639,7 +621,7 @@ a.wd-project-link:hover { text-decoration: underline; }
 }
 
 .or-cred-text {
-  font-size: 0.88rem;
+  font-size: 0.99rem;
   color: var(--stone);
   line-height: 1.55;
 }
@@ -648,17 +630,16 @@ a.wd-project-link:hover { text-decoration: underline; }
 
 @media (max-width: 680px) {
   .or-split { grid-template-columns: 1fr; gap: 2.5rem; }
-  .or-instagram { padding-right: 0; }
   .or-creds { padding-left: 0; border-left: none; border-top: 1px solid color-mix(in srgb, var(--sand) 40%, transparent); padding-top: 2rem; }
 }
 
 /* Events */
-.or-events {
+/* .or-events {
   max-width: var(--max-w);
   margin: 0 auto;
   padding: clamp(2rem, 4vw, 3rem) var(--gutter) clamp(3rem, 6vw, 5rem);
   border-top: 1px solid color-mix(in srgb, var(--sand) 40%, transparent);
-}
+} */
 
 .or-events-header {
   display: flex;
@@ -680,12 +661,13 @@ a.wd-project-link:hover { text-decoration: underline; }
 .or-events-contact:hover { text-decoration: underline; }
 
 .or-events-sublabel {
-  font-size: 0.62rem;
+  font-size: 1.2rem;
   letter-spacing: 0.1em;
-  color: var(--stone);
+  color: var(--dark_ember);
   text-transform: uppercase;
   margin: 1.5rem 0 0.75rem;
   opacity: 0.6;
+  text-decoration: underline;
 }
 
 .or-event-item {
@@ -840,7 +822,7 @@ a.wd-project-link:hover { text-decoration: underline; }
 .footer-sub {
   font-size: 0.62rem;
   letter-spacing: 0.08em;
-  color: var(--stone);
+  color: var(--cream);
   margin-top: 4px;
 }
 
