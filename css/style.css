@@ -15,12 +15,13 @@
 /* ── TOKENS ─────────────────────────────────────────────── */
 
 :root {
-  --dark:    #1C1A16;
-  --cream:   #F2EDE4;
-  --ember:   #C4622A;
-  --sand:    #C4A882;
-  --stone:   #7A6A58;
-  --dark_ember: #914316;
+  --dark:       #252220;
+  --cream:      #F4EFE6;
+  --ember:      #B85C2C;
+  --sand:       #C8B99A;
+  --stone:      #3E3028;
+  --dark_ember: #8A3E18;
+  --sage:       #7D8C5A;
 
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body:    'DM Sans', system-ui, sans-serif;
@@ -42,6 +43,7 @@ body {
   background: var(--cream);
   color: var(--stone);
   line-height: 1.6;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -91,7 +93,7 @@ a { color: inherit; }
 }
 
 .nav-links a {
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   color: var(--sand);
   text-decoration: none;
   letter-spacing: 0.04em;
@@ -152,7 +154,7 @@ a { color: inherit; }
   .nav-links a {
     display: block;
     padding: 0.65rem var(--gutter);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -181,9 +183,10 @@ a { color: inherit; }
 }
 
 .page-header-eyebrow {
-  font-size: 0.68rem;
-  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
   color: var(--stone);
+  font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
@@ -213,9 +216,10 @@ a { color: inherit; }
 .hero-text { max-width: 520px; }
 
 .hero-eyebrow {
-  font-size: 0.68rem;
-  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
   color: var(--stone);
+  font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 1.25rem;
 }
@@ -236,7 +240,7 @@ a { color: inherit; }
 }
 
 .hero-bio {
-  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
   color: var(--stone);
   line-height: 1.75;
   margin-bottom: 2rem;
@@ -249,8 +253,9 @@ a { color: inherit; }
 .btn {
   display: inline-block;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.06em;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
@@ -263,8 +268,8 @@ a { color: inherit; }
 }
 
 .btn-primary:hover {
-  background: #a8501f;
-  border-color: #a8501f;
+  background: #8A3E18;
+  border-color: #8A3E18;
 }
 
 .btn-ghost {
@@ -329,9 +334,10 @@ a { color: inherit; }
 .col:last-child { border-right: none; }
 
 .col-num {
-  font-size: 0.65rem;
-  letter-spacing: 0.3em;
-  color: var(--ember);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  color: var(--sage);
+  font-weight: 500;
   display: block;
   margin-bottom: 1rem;
 }
@@ -345,7 +351,7 @@ a { color: inherit; }
 }
 
 .col-desc {
-  font-size: 2 rem;
+  font-size: 0.95rem;
   color: var(--stone);
   line-height: 1.7;
   margin-bottom: 1.25rem;
@@ -353,7 +359,8 @@ a { color: inherit; }
 
 .col-link {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
+  font-weight: 500;
   color: var(--ember);
   text-decoration: none;
   letter-spacing: 0.04em;
@@ -443,9 +450,10 @@ a { color: inherit; }
 }
 
 .wd-project-tag {
-  font-size: 0.65rem;
+  font-size: 0.68rem;
   letter-spacing: 0.08em;
-  color: var(--stone);
+  color: var(--sage);
+  font-weight: 500;
 }
 
 .wd-project-title {
@@ -457,14 +465,15 @@ a { color: inherit; }
 }
 
 .wd-project-desc {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--stone);
   line-height: 1.75;
 }
 
 .wd-project-link {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
+  font-weight: 500;
   color: var(--ember);
   text-decoration: none;
   letter-spacing: 0.04em;
@@ -496,7 +505,8 @@ a.wd-project-link:hover { text-decoration: underline; }
 
 /* Development — status badge */
 .dev-status {
-  font-size: 0.68rem;
+  font-size: 0.72rem;
+  font-weight: 500;
   letter-spacing: 0.06em;
   color: var(--ember);
   align-self: flex-start;
@@ -511,14 +521,15 @@ a.wd-project-link:hover { text-decoration: underline; }
 }
 
 .wd-closing p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--stone);
   margin-bottom: 0.75rem;
 }
 
 .wd-closing-link {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
+  font-weight: 500;
   color: var(--ember);
   text-decoration: none;
   letter-spacing: 0.04em;
@@ -551,20 +562,16 @@ a.wd-project-link:hover { text-decoration: underline; }
 
 .ab-bio-text {
   max-width: 640px;
-  font-size: clamp(0.9rem, 1.5vw, 1rem);
-  color: var(--stone);
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+  color: var(--dark);
   line-height: 1.8;
   margin-bottom: 1.25rem;
 }
 
-/*
-  LINKEDIN LINK
-  ─────────────
-  To update: change href="#" in about.html to your LinkedIn URL.
-*/
 .ab-linkedin {
   font-family: var(--font-mono);
-  font-size: 1.0 rem;
+  font-size: 0.82rem;
+  font-weight: 500;
   color: var(--dark);
   text-decoration: none;
   letter-spacing: 0.04em;
@@ -582,28 +589,33 @@ a.wd-project-link:hover { text-decoration: underline; }
 
 .or-split {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 0;
   max-width: var(--max-w);
   margin: 0 auto;
   padding: clamp(2rem, 4vw, 3rem) var(--gutter);
   border-top: 1px solid color-mix(in srgb, var(--sand) 40%, transparent);
-
 }
 
 .or-section-label {
   font-size: 1.8rem;
-  letter-spacing: 0.1em;
-  color: var(--stone);
+  letter-spacing: 0.08em;
+  color: var(--sage);
   text-transform: uppercase;
   margin-bottom: 1.25rem;
   display: block;
 }
 
+/* Events */
+.or-events {
+  padding-right: clamp(1.5rem, 3vw, 3rem);
+}
+
 /* Credentials */
-.or-creds { 
-  padding-left: clamp(1.5rem, 3vw, 3rem); 
-  border-left: 1px solid color-mix(in srgb, var(--sand) 40%, transparent); }
+.or-creds {
+  padding-left: clamp(1.5rem, 3vw, 3rem);
+  border-left: 1px solid color-mix(in srgb, var(--sand) 40%, transparent);
+}
 
 .or-cred-item {
   display: flex;
@@ -613,7 +625,8 @@ a.wd-project-link:hover { text-decoration: underline; }
 }
 
 .or-cred-num {
-  font-size: 0.65rem;
+  font-size: 0.68rem;
+  font-weight: 500;
   color: var(--ember);
   letter-spacing: 0.08em;
   min-width: 22px;
@@ -621,7 +634,7 @@ a.wd-project-link:hover { text-decoration: underline; }
 }
 
 .or-cred-text {
-  font-size: 0.99rem;
+  font-size: 0.95rem;
   color: var(--stone);
   line-height: 1.55;
 }
@@ -630,16 +643,9 @@ a.wd-project-link:hover { text-decoration: underline; }
 
 @media (max-width: 680px) {
   .or-split { grid-template-columns: 1fr; gap: 2.5rem; }
+  .or-events { padding-right: 0; }
   .or-creds { padding-left: 0; border-left: none; border-top: 1px solid color-mix(in srgb, var(--sand) 40%, transparent); padding-top: 2rem; }
 }
-
-/* Events */
-/* .or-events {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: clamp(2rem, 4vw, 3rem) var(--gutter) clamp(3rem, 6vw, 5rem);
-  border-top: 1px solid color-mix(in srgb, var(--sand) 40%, transparent);
-} */
 
 .or-events-header {
   display: flex;
@@ -652,7 +658,8 @@ a.wd-project-link:hover { text-decoration: underline; }
 
 .or-events-contact {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 500;
   color: var(--ember);
   text-decoration: none;
   letter-spacing: 0.04em;
@@ -661,12 +668,12 @@ a.wd-project-link:hover { text-decoration: underline; }
 .or-events-contact:hover { text-decoration: underline; }
 
 .or-events-sublabel {
-  font-size: 1.2rem;
+  font-size: 0.72rem;
+  font-weight: 500;
   letter-spacing: 0.1em;
   color: var(--dark_ember);
   text-transform: uppercase;
   margin: 1.5rem 0 0.75rem;
-  opacity: 0.6;
   text-decoration: underline;
 }
 
@@ -679,7 +686,7 @@ a.wd-project-link:hover { text-decoration: underline; }
   transition: opacity 0.2s;
 }
 
-.or-event-item.past { opacity: 0.4; }
+.or-event-item.past { opacity: 0.45; }
 
 .or-event-date {
   min-width: 42px;
@@ -689,15 +696,16 @@ a.wd-project-link:hover { text-decoration: underline; }
 
 .or-event-month {
   display: block;
-  font-size: 1 rem;
+  font-size: 0.68rem;
+  font-weight: 500;
   letter-spacing: 0.1em;
-  color: var(--stone);
+  color: var(--sage);
   text-transform: uppercase;
 }
 
 .or-event-day {
   font-family: var(--font-display);
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: var(--dark);
   line-height: 1;
 }
@@ -716,13 +724,14 @@ a.wd-project-link:hover { text-decoration: underline; }
 }
 
 .or-event-loc {
-  font-size: 0.65rem;
-  color: var(--stone);
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--sage);
   letter-spacing: 0.06em;
 }
 
 .or-event-desc {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   color: var(--stone);
   margin-top: 2px;
 }
@@ -739,9 +748,10 @@ a.wd-project-link:hover { text-decoration: underline; }
 .ct-field { display: flex; flex-direction: column; gap: 8px; }
 
 .ct-label {
-  font-size: 0.65rem;
+  font-size: 0.68rem;
+  font-weight: 500;
   letter-spacing: 0.1em;
-  color: var(--stone);
+  color: var(--sage);
   text-transform: uppercase;
 }
 
@@ -759,7 +769,7 @@ a.wd-project-link:hover { text-decoration: underline; }
   border-radius: 0;
 }
 
-.ct-input::placeholder { color: color-mix(in srgb, var(--stone) 45%, transparent); }
+.ct-input::placeholder { color: color-mix(in srgb, var(--stone) 50%, transparent); }
 
 .ct-input:focus { border-bottom-color: var(--ember); }
 
@@ -771,8 +781,9 @@ a.wd-project-link:hover { text-decoration: underline; }
 
 .ct-submit {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.06em;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
   color: var(--cream);
   background: var(--ember);
   border: none;
@@ -781,11 +792,11 @@ a.wd-project-link:hover { text-decoration: underline; }
   transition: background 0.2s;
 }
 
-.ct-submit:hover { background: #a8501f; }
+.ct-submit:hover { background: #8A3E18; }
 
 .ct-success {
   display: none;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--stone);
   line-height: 1.7;
   padding: 1.5rem 0;
@@ -820,9 +831,10 @@ a.wd-project-link:hover { text-decoration: underline; }
 }
 
 .footer-sub {
-  font-size: 0.62rem;
+  font-size: 0.68rem;
+  font-weight: 500;
   letter-spacing: 0.08em;
-  color: var(--cream);
+  color: var(--sand);
   margin-top: 4px;
 }
 
@@ -834,8 +846,8 @@ a.wd-project-link:hover { text-decoration: underline; }
 }
 
 .footer-links a {
-  font-size: 0.72rem;
-  color: var(--stone);
+  font-size: 0.8rem;
+  color: var(--sand);
   text-decoration: none;
   letter-spacing: 0.04em;
   transition: color 0.2s;
