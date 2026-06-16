@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Development — Natalie Muscat</title>
+  <meta name="description" content="Development projects by Natalie Muscat — full-stack apps and database architecture." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ================================================
+       NAV
+       ================================================ -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <a class="nav-logo" href="index.html">Natalie <em>Muscat</em></a>
+    <ul class="nav-links" role="list">
+      <li><a href="about.html">About</a></li>
+      <li><a href="web-design.html">Web Design</a></li>
+      <li><a href="development.html" aria-current="page">Development</a></li>
+      <li><a href="photography.html">Photography</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main>
+
+    <!-- ================================================
+         PAGE HEADER
+         ================================================ -->
+    <header class="page-header">
+      <p class="page-header-eyebrow mono reveal">Apps · Data · Architecture</p>
+      <h1 class="page-header-title reveal">Development</h1>
+    </header>
+
+    <!-- ================================================
+         FEATURED PROJECTS
+         ================================================
+
+         HOW TO ADD / EDIT PROJECTS
+         ───────────────────────────
+         Each project is a <article class="wd-project"> block.
+         Projects automatically alternate — info left/thumb right,
+         then thumb left/info right — so just stack them in order.
+
+         STATUS BADGE
+         ─────────────
+         Each project has an optional .dev-status badge. Update the
+         text to reflect the current state, e.g.:
+           "In progress"  "Early stages"  "Complete"  "Live"
+
+         TO ADD A SCREENSHOT:
+         1. Save your screenshot to images/ (e.g. images/tracker.jpg)
+            Recommended: 1400px wide, 16:10 ratio, JPG
+         2. Replace the <div class="wd-thumb-placeholder"> with:
+            <img src="images/tracker.jpg" alt="Project tracker app" />
+
+         TO ADD A GITHUB / LIVE LINK:
+         Update href="#" on the .dev-project-link anchor.
+         If a project has no public link yet, use the
+         <span class="wd-project-link"> version (no href) as shown
+         on the Pickleball project below.
+
+         TO ADD A NEW PROJECT:
+         Copy one full <article class="wd-project"> block and paste
+         it below the last one. The alternating layout is automatic.
+    -->
+    <div>
+
+      <!-- Project 1 — Invoice / Project Tracker -->
+      <article class="wd-project reveal">
+        <div class="wd-project-info">
+          <span class="wd-project-tag mono">Python · Flask · JavaScript · SQLite</span>
+          <h2 class="wd-project-title">Project &amp; Invoice Tracker</h2>
+          <p class="wd-project-desc">
+            A personal tool for tracking freelance projects and invoices
+            end-to-end — from first enquiry through to payment. Built to
+            replace a mess of spreadsheets and do exactly what I need,
+            nothing more.
+          </p>
+          <span class="dev-status mono">● In progress</span>
+
+          <!--
+            GITHUB LINK
+            ────────────
+            Replace href="#" with your GitHub repo URL when it's ready.
+            Example: href="https://github.com/yourusername/invoice-tracker"
+          -->
+          <a href="#" class="wd-project-link" target="_blank" rel="noopener">
+            View on GitHub →
+          </a>
+        </div>
+        <div class="wd-project-thumb">
+          <!--
+            Replace this placeholder with a screenshot of the app:
+            <img src="images/tracker.jpg" alt="Project and invoice tracker" />
+          -->
+          <span class="wd-thumb-placeholder mono">images/tracker.jpg</span>
+        </div>
+      </article>
+
+      <!-- Project 2 — Pickleball League DB Architecture -->
+      <article class="wd-project reveal">
+        <div class="wd-project-info">
+          <span class="wd-project-tag mono">PostgreSQL · Database Architecture</span>
+          <h2 class="wd-project-title">Pickleball League App</h2>
+          <p class="wd-project-desc">
+            Database architecture for a client's league management platform.
+            Players, teams, scheduling, standings, and match results —
+            designed for scale from the start.
+          </p>
+          <span class="dev-status mono">● Early stages</span>
+        </div>
+        <div class="wd-project-thumb">
+          <!--
+            Replace this placeholder with an ERD diagram or screenshot:
+            <img src="images/pickleball-erd.jpg" alt="Pickleball league database schema" />
+          -->
+          <span class="wd-thumb-placeholder mono">images/pickleball-erd.jpg</span>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ================================================
+         CLOSING LINE
+         ================================================ -->
+    <div class="wd-closing reveal">
+      <p>More in the pipeline. Reach out if you want to talk architecture, tooling, or a project you're building.</p>
+      <a href="contact.html" class="wd-closing-link">Get in Touch →</a>
+    </div>
+
+  </main>
+
+  <!-- ================================================
+       FOOTER
+       ================================================ -->
+  <footer class="site-footer">
+    <div>
+      <div class="footer-logo">Natalie <em>Muscat</em></div>
+      <div class="footer-sub mono">Data Engineer · Trail Guide · Photographer</div>
+    </div>
+    <nav aria-label="Footer navigation">
+      <ul class="footer-links" role="list">
+        <li><a href="about.html">About</a></li>
+        <li><a href="web-design.html">Web Design</a></li>
+        <li><a href="development.html">Development</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

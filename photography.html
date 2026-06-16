@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photography — Natalie Muscat</title>
+  <meta name="description" content="Adventure and landscape photography by Natalie Muscat — five years on the road across the American West and Baja." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ================================================
+       NAV
+       ================================================ -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <a class="nav-logo" href="index.html">Natalie <em>Muscat</em></a>
+    <ul class="nav-links" role="list">
+      <li><a href="about.html">About</a></li>
+      <li><a href="web-design.html">Web Design</a></li>
+      <li><a href="development.html">Development</a></li>
+      <li><a href="photography.html" aria-current="page">Photography</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ================================================
+       PAGE HEADER
+       ================================================ -->
+  <main>
+    <header class="page-header">
+      <p class="page-header-eyebrow mono reveal"></p>
+      <h1 class="page-header-title reveal">Photography</h1>
+    </header>
+
+    <!-- ================================================
+         MASONRY GRID
+         ================================================
+
+         HOW TO ADD YOUR PHOTOS
+         ──────────────────────
+         Each photo is a <div class="masonry-item"> containing an <img>.
+         The masonry layout handles all sizing automatically — just drop
+         in images at their natural aspect ratios.
+
+         1. Save your photos into the images/ folder
+         2. For each photo, replace a placeholder block like this:
+
+            BEFORE (placeholder):
+            <div class="masonry-item">
+              <div class="masonry-placeholder" style="height:260px;">
+                <span>your-photo.jpg</span>
+              </div>
+            </div>
+
+            AFTER (real photo):
+            <div class="masonry-item">
+              <img src="images/your-photo.jpg" alt="Brief description of the shot" />
+            </div>
+
+         3. Add or remove <div class="masonry-item"> blocks to match
+            however many photos you have. Order them however you like —
+            the browser handles column placement automatically.
+
+         TIP: For best results, export photos at 1200px wide, saved as
+         high-quality JPG. WebP also works and loads faster.
+    -->
+    <section class="masonry" aria-label="Photo gallery">
+
+      <div class="masonry-item reveal">
+        <div class="masonry-placeholder" style="height:100%;">
+          <img src="images/Full_Jeep-Rear.jpeg" alt="Image of a Jeep Wrangler from behind on a sandy overlook"></div>
+      </div>
+
+      <div class="masonry-item reveal reveal-delay-1">
+        <div class="masonry-placeholder" style="height:100%;">
+          <img src="images/BFG_Tire_Focus-Rocks.jpeg" alt="Image of a Jeep Wrangler BFG Tire as the main focus"></div>
+      </div>
+
+      <div class="masonry-item reveal reveal-delay-2">
+        <div class="masonry-placeholder" style="height:180px;"><span>your-photo.jpg</span></div>
+      </div>
+
+      <div class="masonry-item reveal">
+        <div class="masonry-placeholder" style="height:100%;">
+          <img src="images/Side_Profile_Jeep-Sunset.jpeg" alt="Image of a Jeep Wrangler from the passenger side at sunset"></div>
+      </div>
+
+      <div class="masonry-item reveal reveal-delay-1">
+        <div class="masonry-placeholder" style="height:200px;"><span>your-photo.jpg</span></div>
+      </div>
+
+      <div class="masonry-item reveal reveal-delay-2">
+        <div class="masonry-placeholder" style="height:180px;"><span>your-photo.jpg</span></div>
+      </div>
+
+      <div class="masonry-item reveal">
+        <div class="masonry-placeholder" style="height:260px;"><span>your-photo.jpg</span></div>
+      </div>
+
+      <div class="masonry-item reveal reveal-delay-1">
+        <div class="masonry-placeholder" style="height:100%;">
+          <img src="images/BFG_Tire_Focus-View.jpeg" alt="Image of a Jeep Wrangler BFG Tire with a view behind it"></div>
+      </div>
+
+      <div class="masonry-item reveal reveal-delay-2">
+        <div class="masonry-placeholder" style="height:100%">
+          <img src="images/Full_Jeep-Front.jpeg" alt="Image of a Jeep Wrangler from the front"></div>
+      </div>
+
+      <div class="masonry-item reveal">
+        <div class="masonry-placeholder" style="height:200px;"><span>your-photo.jpg</span></div>
+      </div>
+
+      <div class="masonry-item reveal reveal-delay-1">
+        <div class="masonry-placeholder" style="height:360px;"><span>your-photo.jpg</span></div>
+      </div>
+
+      <div class="masonry-item reveal reveal-delay-2">
+        <div class="masonry-placeholder" style="height:220px;"><span>your-photo.jpg</span></div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ================================================
+       FOOTER
+       ================================================ -->
+  <footer class="site-footer">
+    <div>
+      <div class="footer-logo">Natalie <em>Muscat</em></div>
+      <div class="footer-sub mono">Data Engineer · Trail Guide · Photographer</div>
+    </div>
+    <nav aria-label="Footer navigation">
+      <ul class="footer-links" role="list">
+        <li><a href="about.html">About</a></li>
+        <li><a href="web-design.html">Web Design</a></li>
+        <li><a href="development.html">Development</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

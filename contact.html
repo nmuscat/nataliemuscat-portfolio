@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Natalie Muscat</title>
+  <meta name="description" content="Get in touch with Natalie Muscat — photography, web design, development, and offroad enquiries." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ================================================
+       NAV
+       ================================================ -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <a class="nav-logo" href="index.html">Natalie <em>Muscat</em></a>
+    <ul class="nav-links" role="list">
+      <li><a href="about.html">About</a></li>
+      <li><a href="web-design.html">Web Design</a></li>
+      <li><a href="development.html">Development</a></li>
+      <li><a href="photography.html">Photography</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+    <button class="nav-burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main>
+
+    <!-- ================================================
+         PAGE HEADER
+         ================================================ -->
+    <header class="page-header">
+      <p class="page-header-eyebrow mono reveal"></p>
+      <h1 class="page-header-title reveal">Contact</h1>
+    </header>
+
+    <!-- ================================================
+         FORM
+         ================================================
+
+         HOW TO CONNECT FORMSPREE
+         ─────────────────────────
+         1. Go to https://formspree.io and create a free account
+         2. Create a new form — Formspree gives you an endpoint URL
+            that looks like: https://formspree.io/f/abcdefgh
+         3. Replace the action="#" on the <form> tag below with
+            your Formspree URL:
+            <form action="https://formspree.io/f/abcdefgh" method="POST">
+         4. That's it — Formspree handles delivery to your inbox.
+            Your email address never appears in the page source.
+
+         TESTING: Submit the form once after connecting — Formspree
+         sends a confirmation email to activate the endpoint.
+    -->
+    <section class="ct-form-wrap reveal" aria-labelledby="contact-form-label">
+
+      <form
+        id="contact-form"
+        action="#"
+        method="POST"
+        novalidate
+      >
+        <!-- Replace action="#" with your Formspree URL -->
+
+        <div class="ct-field">
+          <label class="ct-label mono" for="name">Name</label>
+          <input
+            class="ct-input"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name"
+            required
+            autocomplete="name"
+          />
+        </div>
+
+        <div class="ct-field" style="margin-top: 28px;">
+          <label class="ct-label mono" for="email">Email</label>
+          <input
+            class="ct-input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="your@email.com"
+            required
+            autocomplete="email"
+          />
+        </div>
+
+        <div class="ct-field" style="margin-top: 28px;">
+          <label class="ct-label mono" for="message">Message</label>
+          <textarea
+            class="ct-input ct-textarea"
+            id="message"
+            name="message"
+            placeholder="What's on your mind?"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="ct-submit" style="margin-top: 36px;">
+          Send Message →
+        </button>
+
+      </form>
+
+      <!-- Success message — shown after form submits -->
+      <div class="ct-success" id="ct-success" role="alert">
+        <strong>Message sent.</strong>
+        Thanks for reaching out — I'll get back to you within a couple of days.
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ================================================
+       FOOTER
+       ================================================ -->
+  <footer class="site-footer">
+    <div>
+      <div class="footer-logo">Natalie <em>Muscat</em></div>
+      <div class="footer-sub mono">Data Engineer · Trail Guide · Photographer</div>
+    </div>
+    <nav aria-label="Footer navigation">
+      <ul class="footer-links" role="list">
+        <li><a href="about.html">About</a></li>
+        <li><a href="web-design.html">Web Design</a></li>
+        <li><a href="development.html">Development</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    /* ------------------------------------------------
+       Form — client-side validation + success state
+       Formspree handles actual delivery once connected.
+       ------------------------------------------------ */
+    const form    = document.getElementById('contact-form');
+    const success = document.getElementById('ct-success');
+
+    form.addEventListener('submit', (e) => {
+
+      /* If Formspree is not yet connected (action="#"), prevent
+         submission and show a local success message for testing */
+      if (form.action.includes('#')) {
+        e.preventDefault();
+        form.style.display = 'none';
+        success.style.display = 'block';
+        return;
+      }
+
+      /* Once Formspree is connected, let the form submit normally.
+         Formspree redirects back to this page with ?success=true
+         — detect that and show the success message. */
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('success') === 'true') {
+        form.style.display = 'none';
+        success.style.display = 'block';
+      }
+    });
+  </script>
+
+</body>
+</html>

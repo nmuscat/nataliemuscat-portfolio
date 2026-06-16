@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Design — Natalie Muscat</title>
+  <meta name="description" content="Web design portfolio — Natalie Muscat. Custom HTML/CSS/JS sites and Shopify store setup." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ================================================
+       NAV
+       ================================================ -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <a class="nav-logo" href="index.html">Natalie <em>Muscat</em></a>
+    <ul class="nav-links" role="list">
+      <li><a href="about.html">About</a></li>
+      <li><a href="web-design.html" aria-current="page">Web Design</a></li>
+      <li><a href="development.html">Development</a></li>
+      <li><a href="photography.html">Photography</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main>
+
+    <!-- ================================================
+         PAGE HEADER
+         ================================================ -->
+    <header class="page-header">
+      <p class="page-header-eyebrow mono reveal"></p>
+      <h1 class="page-header-title reveal">Web Design</h1>
+    </header>
+
+    <!-- ================================================
+         FEATURED PROJECTS
+         ================================================
+
+         HOW TO ADD / EDIT PROJECTS
+         ───────────────────────────
+         Each project is a <div class="wd-project"> block.
+         Projects automatically alternate — screenshot right,
+         then screenshot left — so just stack them in order.
+
+         TO ADD A SCREENSHOT:
+         1. Save your screenshot to images/ (e.g. images/offroad-connections.jpg)
+            Recommended: 1400px wide, 16:10 ratio, JPG
+         2. Replace the <div class="wd-thumb-placeholder"> with:
+            <img src="images/offroad-connections.jpg" alt="Offroad Connections website" />
+
+         TO ADD A NEW PROJECT:
+         Copy one full .wd-project block and paste it below the last one.
+         Update the tag, title, description, and link href.
+
+         TO LINK TO A LIVE SITE:
+         Update href="#" on the .wd-project-link anchor to the real URL.
+    -->
+    <div>
+
+      <!-- Project 1 — This portfolio -->
+      <article class="wd-project reveal">
+        <div class="wd-project-info">
+          <span class="wd-project-tag mono">HTML · CSS · JavaScript</span>
+          <h2 class="wd-project-title">This Portfolio</h2>
+          <p class="wd-project-desc">
+            Designed and built from scratch using AI as a tool to move fast
+            without cutting corners. A personalized site that reflects how
+            I approach every project: intentional, clean, and built to last.
+          </p>
+          <span class="wd-project-link">You're looking at it</span>
+        </div>
+        <div class="wd-project-thumb">
+          <!--
+            Replace this placeholder with a screenshot of this site:
+            <img src="images/portfolio.jpg" alt="Natalie Muscat portfolio website" />
+          -->
+          <span class="wd-thumb-placeholder mono">images/portfolio.jpg</span>
+        </div>
+      </article>
+
+      <!-- Project 2 — Offroad Connections -->
+      <article class="wd-project reveal">
+        <div class="wd-project-info">
+          <span class="wd-project-tag mono">Shopify · Store Setup &amp; Customisation</span>
+          <h2 class="wd-project-title">Offroad Connections</h2>
+          <p class="wd-project-desc">
+            A Shopify store built for the offroad community. Theme selection,
+            full customisation, and launch-ready setup for a brand entering
+            e-commerce for the first time.
+          </p>
+          <a href="#" class="wd-project-link" target="_blank" rel="noopener">
+            Visit Site →
+          </a>
+        </div>
+        <div class="wd-project-thumb">
+          <!--
+            Replace this placeholder with your screenshot:
+            <img src="images/offroad-connections.jpg" alt="Offroad Connections Shopify store" />
+          -->
+          <span class="wd-thumb-placeholder mono">images/offroad-connections.jpg</span>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ================================================
+         CLOSING LINE
+         ================================================ -->
+    <div class="wd-closing reveal">
+      <p>More projects on the way. In the meantime, get in touch to talk about yours.</p>
+      <a href="contact.html" class="wd-closing-link">Start a Conversation →</a>
+    </div>
+
+  </main>
+
+  <!-- ================================================
+       FOOTER
+       ================================================ -->
+  <footer class="site-footer">
+    <div>
+      <div class="footer-logo">Natalie <em>Muscat</em></div>
+      <div class="footer-sub mono">Data Engineer · Trail Guide · Photographer</div>
+    </div>
+    <nav aria-label="Footer navigation">
+      <ul class="footer-links" role="list">
+        <li><a href="about.html">About</a></li>
+        <li><a href="web-design.html">Web Design</a></li>
+        <li><a href="development.html">Development</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
