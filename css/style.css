@@ -25,7 +25,7 @@
   --font-body:    'DM Sans', system-ui, sans-serif;
   --font-mono:    'DM Mono', 'Courier New', monospace;
 
-  --max-w: 1160px;
+  --max-w: 1260px;
   --gutter: clamp(1.25rem, 5vw, 3rem);
 }
 
@@ -34,7 +34,13 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  min-height: 100%;
+}
 
 body {
   font-family: var(--font-body);
@@ -42,6 +48,18 @@ body {
   color: var(--stone);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*
+  Pushes the footer to the bottom of the viewport on short pages.
+  main grows to fill any leftover space; the footer (and nav,
+  since it's a sibling at the top) stay fixed in size.
+*/
+main {
+  flex: 1 0 auto;
 }
 
 img { display: block; max-width: 100%; height: auto; }
@@ -174,7 +192,7 @@ a { color: inherit; }
 /* ── PAGE HEADER (shared across inner pages) ─────────────── */
 
 .page-header {
-  padding: clamp(2.5rem, 6vw, 4rem) var(--gutter) clamp(1.5rem, 4vw, 2.5rem);
+  padding: clamp(1.5rem, 3vw, 2rem) var(--gutter) clamp(1.5rem, 4vw, 2.5rem);
   max-width: var(--max-w);
   margin: 0 auto;
 }
@@ -201,10 +219,10 @@ a { color: inherit; }
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: calc(100vh - 60px);
+  min-height: auto;
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: var(--gutter);
+  padding: clamp(1.5rem, 3vw, 2.5rem) var(--gutter) clamp(2.5rem, 5vw, 3.5rem);
   gap: var(--gutter);
   align-items: center;
 }
@@ -212,9 +230,9 @@ a { color: inherit; }
 .hero-text { max-width: 520px; }
 
 .hero-eyebrow {
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   letter-spacing: 0.1em;
-  color: var(--stone);
+  color: var(--ember);
   text-transform: uppercase;
   margin-bottom: 1.25rem;
 }
@@ -542,79 +560,127 @@ a.wd-project-link:hover { text-decoration: underline; }
 
 /* ── ABOUT — BIO ─────────────────────────────────────────── */
 
-.ab-bio {
+/* ── CONTACT PAGE — BIO + CREDENTIALS SPLIT ──────────────── */
+
+.ct-top-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 0 var(--gutter) clamp(2.5rem, 5vw, 4rem);
-  display: grid;
-  grid-template-columns: 1fr 320px;
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: start;
+  padding: 0 var(--gutter) clamp(2rem, 4vw, 3rem);
 }
 
-.ab-bio-content {
+.ct-bio {
+  padding-right: clamp(1.5rem, 3vw, 3rem);
+  border-right: 1px solid color-mix(in srgb, var(--sand) 40%, transparent);
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
 }
 
-.ab-bio-text {
-  max-width: 640px;
+.ct-bio-text {
   font-size: clamp(0.9rem, 1.5vw, 1rem);
   color: var(--stone);
   line-height: 1.8;
 }
 
-.ab-bio-img {
-  width: 100%;
-  max-width: 320px;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  object-position: top center;
-  border-radius: 4px;
+.ct-bio-links {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
 }
 
-/*
-  LINKEDIN LINK
-  ─────────────
-  To update: change href="#" in about.html to your LinkedIn URL.
-*/
-.ab-linkedin {
+.ct-bio-link {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.87rem;
   color: var(--ember);
   text-decoration: none;
   letter-spacing: 0.04em;
   border-bottom: 1px solid color-mix(in srgb, var(--ember) 35%, transparent);
   padding-bottom: 2px;
   transition: border-color 0.2s;
-  align-self: flex-start;
+  cursor: pointer;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 
-.ab-linkedin:hover {
-  border-color: var(--ember);
+.ct-bio-link:hover {
+  border-bottom-color: var(--ember);
 }
+
+/* Credentials */
+.ct-creds { padding-left: clamp(1.5rem, 3vw, 3rem); }
+
+.ct-cred-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+
+.ct-cred-num {
+  font-size: 0.65rem;
+  color: var(--ember);
+  letter-spacing: 0.08em;
+  min-width: 22px;
+  padding-top: 2px;
+}
+
+.ct-cred-text {
+  font-size: 0.88rem;
+  color: var(--stone);
+  line-height: 1.55;
+}
+
+.ct-cred-text strong { color: var(--dark); font-weight: 500; }
 
 @media (max-width: 680px) {
-  .ab-bio {
-    grid-template-columns: 1fr;
-  }
-  .ab-bio-img {
-    order: -1;
-    max-width: 280px;
+  .ct-top-split { grid-template-columns: 1fr; gap: 2.5rem; }
+  .ct-bio { padding-right: 0; border-right: none; }
+  .ct-creds {
+    padding-left: 0;
+    padding-top: 2rem;
+    border-top: 1px solid color-mix(in srgb, var(--sand) 40%, transparent);
   }
 }
 
 
-/* ── OFFROAD / ABOUT — SPLIT + CREDENTIALS + EVENTS ─────── */
+/* ── CONTACT PAGE — FORM + PHOTO SPLIT ───────────────────── */
 
-.or-split {
+.ct-mid-split {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
+  grid-template-columns: 7fr 3fr;
+  gap: clamp(2rem, 4vw, 3rem);
   max-width: var(--max-w);
   margin: 0 auto;
   padding: clamp(2rem, 4vw, 3rem) var(--gutter);
+  border-top: 1px solid color-mix(in srgb, var(--sand) 40%, transparent);
+  align-items: start;
+}
+
+.ct-photo-img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 4px;
+}
+
+@media (max-width: 680px) {
+  .ct-mid-split { grid-template-columns: 1fr; }
+  .ct-photo-img { max-width: 280px; order: -1; }
+}
+
+
+/* ── CONTACT PAGE — EVENTS (FULL WIDTH) ──────────────────── */
+
+.or-events {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: clamp(2rem, 4vw, 3rem) var(--gutter) clamp(3rem, 6vw, 5rem);
   border-top: 1px solid color-mix(in srgb, var(--sand) 40%, transparent);
 }
 
@@ -625,68 +691,6 @@ a.wd-project-link:hover { text-decoration: underline; }
   text-transform: uppercase;
   margin-bottom: 1.25rem;
   display: block;
-}
-
-/* Instagram */
-.or-instagram { padding-right: clamp(1.5rem, 3vw, 3rem); }
-
-.or-instagram-embed {
-  width: 100%;
-  min-height: 320px;
-}
-
-.or-instagram-placeholder {
-  width: 100%;
-  min-height: 320px;
-  background: color-mix(in srgb, var(--dark) 6%, transparent);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  font-size: 0.65rem;
-  color: color-mix(in srgb, var(--stone) 50%, transparent);
-  letter-spacing: 0.06em;
-}
-
-/* Credentials */
-.or-creds { padding-left: clamp(1.5rem, 3vw, 3rem); border-left: 1px solid color-mix(in srgb, var(--sand) 40%, transparent); }
-
-.or-cred-item {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-  margin-bottom: 1.25rem;
-}
-
-.or-cred-num {
-  font-size: 0.65rem;
-  color: var(--ember);
-  letter-spacing: 0.08em;
-  min-width: 22px;
-  padding-top: 2px;
-}
-
-.or-cred-text {
-  font-size: 0.88rem;
-  color: var(--stone);
-  line-height: 1.55;
-}
-
-.or-cred-text strong { color: var(--dark); font-weight: 500; }
-
-@media (max-width: 680px) {
-  .or-split { grid-template-columns: 1fr; gap: 2.5rem; }
-  .or-instagram { padding-right: 0; }
-  .or-creds { padding-left: 0; border-left: none; border-top: 1px solid color-mix(in srgb, var(--sand) 40%, transparent); padding-top: 2rem; }
-}
-
-/* Events */
-.or-events {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: clamp(2rem, 4vw, 3rem) var(--gutter) clamp(3rem, 6vw, 5rem);
-  border-top: 1px solid color-mix(in srgb, var(--sand) 40%, transparent);
 }
 
 .or-events-header {
@@ -736,7 +740,7 @@ a.wd-project-link:hover { text-decoration: underline; }
 
 .or-event-month {
   display: block;
-  font-size: 1 rem;
+  font-size: 0.65rem;
   letter-spacing: 0.1em;
   color: var(--stone);
   text-transform: uppercase;
@@ -744,7 +748,7 @@ a.wd-project-link:hover { text-decoration: underline; }
 
 .or-event-day {
   font-family: var(--font-display);
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: var(--dark);
   line-height: 1;
 }
@@ -778,9 +782,7 @@ a.wd-project-link:hover { text-decoration: underline; }
 /* ── CONTACT ─────────────────────────────────────────────── */
 
 .ct-form-wrap {
-  max-width: 540px;
-  margin: 0 auto;
-  padding: 0 var(--gutter) clamp(4rem, 8vw, 6rem);
+  max-width: 100%;
 }
 
 .ct-field { display: flex; flex-direction: column; gap: 8px; }
@@ -855,7 +857,7 @@ a.wd-project-link:hover { text-decoration: underline; }
 
 .footer-logo {
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: 0.99rem;
   color: var(--cream);
   font-weight: 400;
 }
@@ -867,9 +869,9 @@ a.wd-project-link:hover { text-decoration: underline; }
 }
 
 .footer-sub {
-  font-size: 0.62rem;
+  font-size: 0.78rem;
   letter-spacing: 0.08em;
-  color: var(--stone);
+  color: var(--cream);
   margin-top: 4px;
 }
 

@@ -9,13 +9,9 @@
 </head>
 <body>
 
-  <!-- ================================================
-       NAV
-       ================================================ -->
   <nav class="site-nav" aria-label="Main navigation">
     <a class="nav-logo" href="index.html">Natalie <em>Muscat</em></a>
     <ul class="nav-links" role="list">
-      <li><a href="about.html">About</a></li>
       <li><a href="web-design.html">Web Design</a></li>
       <li><a href="development.html">Development</a></li>
       <li><a href="photography.html">Photography</a></li>
@@ -28,98 +24,292 @@
 
   <main>
 
-    <!-- ================================================
-         PAGE HEADER
-         ================================================ -->
     <header class="page-header">
-      <p class="page-header-eyebrow mono reveal"></p>
       <h1 class="page-header-title reveal">Contact</h1>
     </header>
 
-    <!-- ================================================
-         FORM
-         ================================================
+    <section class="ct-top-split" aria-label="About and credentials">
 
-         HOW TO CONNECT FORMSPREE
-         ─────────────────────────
-         1. Go to https://formspree.io and create a free account
-         2. Create a new form — Formspree gives you an endpoint URL
-            that looks like: https://formspree.io/f/abcdefgh
-         3. Replace the action="#" on the <form> tag below with
-            your Formspree URL:
-            <form action="https://formspree.io/f/abcdefgh" method="POST">
-         4. That's it — Formspree handles delivery to your inbox.
-            Your email address never appears in the page source.
+      <div class="ct-bio reveal">
+        <p class="ct-bio-text">
+          From building software training departments to
+          automating data pipelines, my career has always
+          evolved.<br><br>
+          As has my personal life.
+          I'm deeply involved in the overlanding community,
+          mapping trails, teaching offroad fundamentals, and
+          competing in or supporting navigation rallies.<br><br>
+          Turns out problem solving looks the same whether
+          you're debugging a pipeline or navigating the desert
+          with a paper map and a compass.
+        </p>
 
-         TESTING: Submit the form once after connecting — Formspree
-         sends a confirmation email to activate the endpoint.
-    -->
-    <section class="ct-form-wrap reveal" aria-labelledby="contact-form-label">
+        <p class="ct-bio-text" style="font-weight: 500; color: var(--dark);">
+          Let's connect!
+        </p>
 
-      <form
-        id="contact-form"
-        action="#"
-        method="POST"
-        novalidate
+        <div class="ct-bio-links">
+          <a href="https://www.linkedin.com/in/natalie-muscat-6583836b/" class="ct-bio-link" target="_blank" rel="noopener">
+            LinkedIn →
+          </a>
+          <a href="https://www.instagram.com/natsacoolcat" class="ct-bio-link" target="_blank" rel="noopener">
+            Instagram →
+          </a>
+          <button type="button" class="ct-bio-link" id="scroll-to-events">
+            Events ↓
+          </button>
+        </div>
+      </div>
+
+      <div class="ct-creds reveal">
+        <h2 class="or-section-label mono" style="margin-bottom:1.25rem;">Credentials</h2>
+
+        <div class="ct-cred-item">
+          <span class="ct-cred-num mono">01</span>
+          <span class="ct-cred-text">
+            <strong>TreadTrainer &amp; Ambassador</strong> — Tread Lightly! California
+            
+          </span>
+        </div>
+
+        <div class="ct-cred-item">
+          <span class="ct-cred-num mono">02</span>
+          <span class="ct-cred-text">
+            <strong>Instructor &amp; Roundtable Panelist</strong> — Overland Expo
+            · Women Who Wander series
+          </span>
+        </div>
+
+        <div class="ct-cred-item">
+          <span class="ct-cred-num mono">03</span>
+          <span class="ct-cred-text">
+            <strong>Trail Guide</strong> — onX Offroad
+          </span>
+        </div>
+
+        <div class="ct-cred-item">
+          <span class="ct-cred-num mono">04</span>
+          <span class="ct-cred-text">
+            <strong>Competitor</strong> — Rebelle Rally 2023
+          </span>
+        </div>
+
+        <div class="ct-cred-item">
+          <span class="ct-cred-num mono">05</span>
+          <span class="ct-cred-text">
+            <strong>5+ years</strong> exploring the American West
+            and Baja by vehicle
+          </span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="ct-mid-split" aria-label="Contact form and photo">
+
+      <div class="ct-form-wrap reveal" aria-labelledby="contact-form-label">
+
+        <form
+          id="contact-form"
+          action="#"
+          method="POST"
+          novalidate
+        >
+
+          <div class="ct-field">
+            <label class="ct-label mono" for="name">Name</label>
+            <input
+              class="ct-input"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your name"
+              required
+              autocomplete="name"
+            />
+          </div>
+
+          <div class="ct-field" style="margin-top: 28px;">
+            <label class="ct-label mono" for="email">Email</label>
+            <input
+              class="ct-input"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="your@email.com"
+              required
+              autocomplete="email"
+            />
+          </div>
+
+          <div class="ct-field" style="margin-top: 28px;">
+            <label class="ct-label mono" for="message">Message</label>
+            <textarea
+              class="ct-input ct-textarea"
+              id="message"
+              name="message"
+              placeholder="What's on your mind?"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="ct-submit" style="margin-top: 36px;">
+            Send Message →
+          </button>
+
+        </form>
+
+        <div class="ct-success" id="ct-success" role="alert">
+          <strong>Message sent.</strong>
+          Thanks for reaching out — I'll get back to you within a couple of days.
+        </div>
+      </div>
+
+      <img
+        src="images/NatalieMuscat_JeepWrangler-Profile.PNG"
+        alt="Profile Picture - Natalie Muscat with Jeep Wrangler"
+        class="ct-photo-img"
       >
-        <!-- Replace action="#" with your Formspree URL -->
 
-        <div class="ct-field">
-          <label class="ct-label mono" for="name">Name</label>
-          <input
-            class="ct-input"
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Your name"
-            required
-            autocomplete="name"
-          />
+    </section>
+
+    <section class="or-events reveal" aria-labelledby="events-heading">
+
+      <div class="or-events-header">
+        <h2 id="events-heading" class="or-section-label mono" style="margin-bottom:0;">
+          Events
+        </h2>
+      </div>
+
+      <p class="or-events-sublabel mono">Upcoming</p>
+
+      <div class="or-event-item">
+        <div class="or-event-date">
+          <span class="or-event-month mono">Oct</span>
+          <span class="or-event-day">8 - 17, 2026</span>
         </div>
-
-        <div class="ct-field" style="margin-top: 28px;">
-          <label class="ct-label mono" for="email">Email</label>
-          <input
-            class="ct-input"
-            type="email"
-            id="email"
-            name="email"
-            placeholder="your@email.com"
-            required
-            autocomplete="email"
-          />
+        <div class="or-event-info">
+          <span class="or-event-name">Rebelle Rally - Staff</span>
+          <span class="or-event-loc mono">Las Vegas, NV to TBD</span>
+          <span class="or-event-desc">Staff for the Rebelle Rally 2026 Competition</span>
         </div>
+      </div>
 
-        <div class="ct-field" style="margin-top: 28px;">
-          <label class="ct-label mono" for="message">Message</label>
-          <textarea
-            class="ct-input ct-textarea"
-            id="message"
-            name="message"
-            placeholder="What's on your mind?"
-            required
-          ></textarea>
+      <p class="or-events-sublabel mono">Past</p>
+
+      <div class="or-event-item past">
+        <div class="or-event-date">
+          <span class="or-event-month mono">May</span>
+          <span class="or-event-day">15 - 17, 2026</span>
         </div>
+        <div class="or-event-info">
+          <span class="or-event-name">Overland Expo WEST</span>
+          <span class="or-event-loc mono">Flagstaff, AZ</span>
+          <span class="or-event-desc">Roundtable panelist — Women Who Wander series Instructor</span>
+        </div>
+      </div>
 
-        <button type="submit" class="ct-submit" style="margin-top: 36px;">
-          Send Message →
-        </button>
+      <div class="or-event-item past">
+        <div class="or-event-date">
+          <span class="or-event-month mono">Mar</span>
+          <span class="or-event-day">29, 2026</span>
+        </div>
+        <div class="or-event-info">
+          <span class="or-event-name">Flex Motors Tacoma Reveal- TreadLightly! Representative</span>
+          <span class="or-event-loc mono">San Diego, CA</span>
+          <span class="or-event-desc">Booth representation for TreadLightly!</span>
+        </div>
+      </div>
 
-      </form>
+      <div class="or-event-item past">
+        <div class="or-event-date">
+          <span class="or-event-month mono">Mar</span>
+          <span class="or-event-day">14 - 15, 2026</span>
+        </div>
+        <div class="or-event-info">
+          <span class="or-event-name">Overland Expo SoCal</span>
+          <span class="or-event-loc mono">Costa Mesa, CA</span>
+          <span class="or-event-desc">Instructor for the Women Who Wander series</span>
+        </div>
+      </div>
 
-      <!-- Success message — shown after form submits -->
-      <div class="ct-success" id="ct-success" role="alert">
-        <strong>Message sent.</strong>
-        Thanks for reaching out — I'll get back to you within a couple of days.
+      <div class="or-event-item past">
+        <div class="or-event-date">
+          <span class="or-event-month mono">Oct</span>
+          <span class="or-event-day">17 - 18, 2025</span>
+        </div>
+        <div class="or-event-info">
+          <span class="or-event-name">Rebelle Rally 2025 - TreadLightly!</span>
+          <span class="or-event-loc mono">Nevada / California</span>
+          <span class="or-event-desc">TreadLightly! Representative at the women only, off-road navigation rally across the American Southwest</span>
+        </div>
+      </div>
+
+      <div class="or-event-item past">
+        <div class="or-event-date">
+          <span class="or-event-month mono">May</span>
+          <span class="or-event-day">16 - 18, 2025</span>
+        </div>
+        <div class="or-event-info">
+          <span class="or-event-name">Overland Expo WEST</span>
+          <span class="or-event-loc mono">Flagstaff, AZ</span>
+          <span class="or-event-desc">Roundtable panelist — Women Who Wander series Instructor</span>
+        </div>
+      </div>
+
+      <div class="or-event-item past">
+        <div class="or-event-date">
+          <span class="or-event-month mono">Mar</span>
+          <span class="or-event-day">15 - 16, 2025</span>
+        </div>
+        <div class="or-event-info">
+          <span class="or-event-name">Overland Expo SoCal</span>
+          <span class="or-event-loc mono">Costa Mesa, CA</span>
+          <span class="or-event-desc">Roundtable panelist for the Women Who Wander series</span>
+        </div>
+      </div>
+
+      <div class="or-event-item past">
+        <div class="or-event-date">
+          <span class="or-event-month mono">Jun</span>
+          <span class="or-event-day">28 - 30, 2024</span>
+        </div>
+        <div class="or-event-info">
+          <span class="or-event-name">Overland Expo PNW</span>
+          <span class="or-event-loc mono">Redmond, OR</span>
+          <span class="or-event-desc">Roundtable panelist — Women Who Wander series Instructor</span>
+        </div>
+      </div>
+
+      <div class="or-event-item past">
+        <div class="or-event-date">
+          <span class="or-event-month mono">May</span>
+          <span class="or-event-day">17 - 19, 2024</span>
+        </div>
+        <div class="or-event-info">
+          <span class="or-event-name">Overland Expo WEST</span>
+          <span class="or-event-loc mono">Flagstaff, AZ</span>
+          <span class="or-event-desc">Roundtable panelist</span>
+        </div>
+      </div>
+
+      <div class="or-event-item past">
+        <div class="or-event-date">
+          <span class="or-event-month mono">Oct</span>
+          <span class="or-event-day">12 - 21, 2023</span>
+        </div>
+        <div class="or-event-info">
+          <span class="or-event-name">Rebelle Rally 2023 - Competitor</span>
+          <span class="or-event-loc mono">Nevada / California</span>
+          <span class="or-event-desc">Women only, off-road navigation rally across the American Southwest</span>
+        </div>
       </div>
 
     </section>
 
   </main>
 
-  <!-- ================================================
-       FOOTER
-       ================================================ -->
   <footer class="site-footer">
     <div>
       <div class="footer-logo">Natalie <em>Muscat</em></div>
@@ -138,17 +328,10 @@
 
   <script src="js/main.js"></script>
   <script>
-    /* ------------------------------------------------
-       Form — client-side validation + success state
-       Formspree handles actual delivery once connected.
-       ------------------------------------------------ */
     const form    = document.getElementById('contact-form');
     const success = document.getElementById('ct-success');
 
     form.addEventListener('submit', (e) => {
-
-      /* If Formspree is not yet connected (action="#"), prevent
-         submission and show a local success message for testing */
       if (form.action.includes('#')) {
         e.preventDefault();
         form.style.display = 'none';
@@ -156,15 +339,21 @@
         return;
       }
 
-      /* Once Formspree is connected, let the form submit normally.
-         Formspree redirects back to this page with ?success=true
-         — detect that and show the success message. */
       const params = new URLSearchParams(window.location.search);
       if (params.get('success') === 'true') {
         form.style.display = 'none';
         success.style.display = 'block';
       }
     });
+
+    const scrollBtn = document.getElementById('scroll-to-events');
+    const eventsHeading = document.getElementById('events-heading');
+
+    if (scrollBtn && eventsHeading) {
+      scrollBtn.addEventListener('click', () => {
+        eventsHeading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
   </script>
 
 </body>
